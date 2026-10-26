@@ -11,3 +11,33 @@ Content-Type: text/html
 2026-10-26 11:11:24,040 - Port 80 - CVE-2016-6814 - Severity: HIGH - CVSS 7.5
 2026-10-26 11:11:24,040 - Port 80 - CVE-2021-44224 - Severity: HIGH - CVSS 8.2
 2026-10-26 11:11:24,040 - Port 80 - CVE-2025-66200 - Severity: MEDIUM - CVSS 5.4
+2026-10-26 11:17:58,049 - --- New scan: scanme.nmap.org - ports [22, 80, 443] ---
+2026-10-26 11:17:58,621 - Port 22 - banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13
+2026-10-26 11:18:05,497 - Port 22 - OpenSSH 6.6.1 - no CVE matches
+2026-10-26 11:18:07,611 - Port 80 - banner: HTTP/1.1 200 OK
+Date: Mon, 26 Oct 2026 06:18:06 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+2026-10-26 11:18:14,463 - Port 80 - CVE-2012-2378 - Severity: MEDIUM - CVSS 4.3
+2026-10-26 11:18:14,463 - Port 80 - CVE-2016-6814 - Severity: HIGH - CVSS 7.5
+2026-10-26 11:18:14,464 - Port 80 - CVE-2021-44224 - Severity: HIGH - CVSS 8.2
+2026-10-26 11:18:14,464 - Port 80 - CVE-2025-66200 - Severity: MEDIUM - CVSS 5.4
+2026-10-26 11:18:17,470 - Port 443 - no banner
+2026-10-26 11:20:42,111 - --- New scan: scanme.nmap.org - ports [22, 80, 443] ---
+2026-10-26 11:20:42,722 - Port 22 - banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13
+2026-10-26 11:20:49,494 - Port 22 - OpenSSH 6.6.1 - no CVE matches
+2026-10-26 11:20:51,657 - Port 80 - banner: HTTP/1.1 200 OK
+Date: Mon, 26 Oct 2026 06:20:50 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+2026-10-26 11:20:58,973 - Port 80 - CVE-2012-2378 - Severity: MEDIUM - CVSS 4.3
+2026-10-26 11:20:58,974 - Port 80 - CVE-2016-6814 - Severity: HIGH - CVSS 7.5
+2026-10-26 11:20:58,975 - Port 80 - CVE-2021-44224 - Severity: HIGH - CVSS 8.2
+2026-10-26 11:20:58,975 - Port 80 - CVE-2025-66200 - Severity: MEDIUM - CVSS 5.4
+2026-10-26 11:21:01,988 - Port 443 - no banner
