@@ -1,0 +1,13 @@
+2026-10-26 11:11:16,048 - --- New scan: scanme.nmap.org - ports [22, 80] ---
+2026-10-26 11:11:16,650 - Port 22 - no banner
+2026-10-26 11:11:17,237 - Port 80 - banner: HTTP/1.1 200 OK
+Date: Mon, 26 Oct 2026 06:11:16 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+2026-10-26 11:11:24,040 - Port 80 - CVE-2012-2378 - Severity: MEDIUM - CVSS 4.3
+2026-10-26 11:11:24,040 - Port 80 - CVE-2016-6814 - Severity: HIGH - CVSS 7.5
+2026-10-26 11:11:24,040 - Port 80 - CVE-2021-44224 - Severity: HIGH - CVSS 8.2
+2026-10-26 11:11:24,040 - Port 80 - CVE-2025-66200 - Severity: MEDIUM - CVSS 5.4
