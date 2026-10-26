@@ -2,7 +2,8 @@
 __pycache__/
 *.pyc
 .venv/
-venv/
+cve_scan_report.json
+cve_scan_results.log
 
 # Scanner output and cache
 report.json
