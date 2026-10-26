@@ -25,22 +25,32 @@ REQUEST_DELAY = 6  # NVD's public (no API key) rate limit is strict - stay well 
 findings = []
 
 
-def grab_banner(host, port, timeout=2):
-    # connects to a port and reads whatever the service announces about itself -
-    # same socket approach as the Week 1 port scanner, but reading data back
-    # instead of just checking open/closed
+def grab_banner(host, port, timeout=3):
+    # Different services behave differently on connect:
+    # - SSH sends its banner immediately, unprompted
+    # - HTTP waits for a request before responding
+    # So we try reading first, and only send a probe if nothing arrives on its own.
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(timeout)
         sock.connect((host, port))
 
-        # some services (like HTTP) need a nudge before they respond
         try:
-            sock.send(b"HEAD / HTTP/1.0\r\n\r\n")
-        except Exception:
-            pass
+            # try to read whatever the service sends unprompted first (SSH, FTP, SMTP, etc.)
+            sock.settimeout(1.5)
+            banner = sock.recv(1024).decode(errors="ignore").strip()
+        except socket.timeout:
+            banner = ""
 
-        banner = sock.recv(1024).decode(errors="ignore").strip()
+        if not banner:
+            # nothing came on its own - try nudging it like an HTTP server would expect
+            try:
+                sock.settimeout(timeout)
+                sock.send(b"HEAD / HTTP/1.0\r\n\r\n")
+                banner = sock.recv(1024).decode(errors="ignore").strip()
+            except Exception:
+                banner = ""
+
         sock.close()
         return banner if banner else None
 
