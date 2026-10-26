@@ -51,7 +51,7 @@ This task specifically asked to cover these concepts, so documenting them here r
 A Critical-severity finding on an internet-facing, actively-exploited service would get immediate attention; a Low-severity finding on an internal, rarely-used service might be scheduled into regular patch cycles instead.
 
 ## Security considerations
-- Only scan hosts you own or have explicit, documented permission to test — unauthorized scanning can violate terms of service or the law, independent of intent
+- Only scan hosts you own or have explicit, documented permission to test, unauthorized scanning can violate terms of service or the law, independent of intent
 - Banner-based detection can be inaccurate - some services deliberately obscure or spoof their version banners, which would cause false negatives (or occasionally false positives) here
 - This tool identifies *potential* matches based on keyword search, not confirmed exploitability a real assessment would verify each finding manually before treating it as confirmed
 
